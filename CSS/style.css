@@ -1,0 +1,88 @@
+:root {
+    font-size: 10px;
+    --border: 0.1rem solid rgba(255,255,255,0.3);
+}
+
+/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none; /* Remove contorno de elementos como botões */
+    border: none; /* Remove bordas de elementos como botões */
+    text-decoration: none; /* Linha abaixo dos links */
+    text-transform: capitalize; /* Todos os textos iniciam com maiúsculas */
+    transition: 0.2 linear;
+}
+
+body {
+    background-color: #666666;
+}
+
+section {
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.background {
+    width: 100%;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    object-fit: cover; /* A imagem cobre toda a área sem distorção */
+    filter: blur(25px); /* Aplica o desfoque apenas à imagem */
+    position: fixed; /* Garante que a imagem de fundo fique fixa */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Coloca a imagem atrás do conteúdo */
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-bottom: var(--border);
+    opacity: 1;
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.header img {
+    width: 125px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Centraliza os links na navbar */
+    gap: 2rem; /* Espaçamento entre os links */
+    padding: 5rem 0;
+}
+
+.navbar a {
+    font-size: 2rem; /* Ajuste o tamanho da fonte, se necessário */
+    color: #fff; /* Cor do texto */
+    padding: 0.5rem 1rem; /* Adiciona um pouco de espaço ao redor dos links */
+    text-transform: none; /* Evita a capitalização no menu */
+}
+
+.buttonHeader {
+    display: flex;
+    justify-content: flex-end; /* Move o botão para a direita */
+    padding-right: 15rem; /* Adiciona um pequeno espaço à direita */
+    margin-top: -9rem;
+}
+
+.buttonCTA {
+    padding: 2rem 4rem;
+    background-color: #D2AA3C; /* Cor de fundo do botão */
+    color: #fff;
+    font-size: 1.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
