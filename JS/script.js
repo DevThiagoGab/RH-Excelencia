@@ -1,3 +1,7 @@
+function toggleMenu() {
+    document.querySelector(".navbar").classList.toggle("active");
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     // Seleciona o botão usando a classe (usando o método querySelector)
     const whatsappButton = document.querySelector(".button-CTA");
@@ -27,4 +31,27 @@ document.addEventListener("DOMContentLoaded", function () {
             window.location.reload();
         });
     }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const navbarLinks = document.querySelectorAll(".navbar a");
+    const headerHeight = document.querySelector(".header").offsetHeight; // Altura do cabeçalho
+
+    navbarLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // Impede o comportamento padrão
+
+            const targetId = this.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+                const offsetTop = targetSection.offsetTop - headerHeight + 100; // Ajuste para exibir o título
+                
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
 });
