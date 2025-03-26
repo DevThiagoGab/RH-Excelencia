@@ -34,7 +34,7 @@ git clone https://github.com/seu-usuario/seu-repositorio.git
 
 Abra o arquivo index.html em um navegador.
 
-Estrutura do Projeto
+<h3>Estrutura do Projeto</h3>
 
 index.html   # Estrutura principal da página
 
