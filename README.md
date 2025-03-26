@@ -36,8 +36,10 @@ Abra o arquivo index.html em um navegador.
 
 Estrutura do Projeto
 
-/
 index.html   # Estrutura principal da página
+
 style.css    # Estilização da página
+
 script.js    # Funcionalidades interativas
+
 img/      # Imagens e ícones
